@@ -26,5 +26,6 @@
     },
     "replace": {
         "aferrandini/phpqrcode": "self.version"
-    }
+    },
+    "version": "1.0.2"
 }
