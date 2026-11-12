@@ -99,7 +99,7 @@ class QRcode {
     //----------------------------------------------------------------------
     public function encodeString8bit($string, $version, $level)
     {
-        if(string == NULL) {
+        if(\STRING == NULL) {
             throw new Exception('empty string!');
             return NULL;
         }
@@ -107,7 +107,7 @@ class QRcode {
         $input = new QRinput($version, $level);
         if($input == NULL) return NULL;
 
-        $ret = $input->append($input, Constants::QR_MODE_8, strlen($string), str_split($string));
+        $ret = $input->append($input, Constants::QR_MODE_8, strlen($string));
         if($ret < 0) {
             unset($input);
             return NULL;

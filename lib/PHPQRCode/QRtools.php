@@ -127,7 +127,7 @@ class QRtools {
     //----------------------------------------------------------------------
     public static function markTime($markerId)
     {
-        list($usec, $sec) = explode(" ", microtime());
+        [$usec, $sec] = explode(" ", microtime());
         $time = ((float)$usec + (float)$sec);
 
         if (!isset($GLOBALS['qr_time_bench']))

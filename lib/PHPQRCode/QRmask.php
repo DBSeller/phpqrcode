@@ -146,13 +146,13 @@ class QRmask {
             if (file_exists($fileName)) {
                 $bitMask = self::unserial(file_get_contents($fileName));
             } else {
-                $bitMask = $this->generateMaskNo($maskNo, $width, $s, $d);
+                $bitMask = $this->generateMaskNo($maskNo, $width, $s);
                 if (!file_exists(Constants::QR_CACHE_DIR.'mask_'.$maskNo))
                     mkdir(Constants::QR_CACHE_DIR.'mask_'.$maskNo);
                 file_put_contents($fileName, self::serial($bitMask));
             }
         } else {
-            $bitMask = $this->generateMaskNo($maskNo, $width, $s, $d);
+            $bitMask = $this->generateMaskNo($maskNo, $width, $s);
         }
 
         if ($maskGenOnly)
